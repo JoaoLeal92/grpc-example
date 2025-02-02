@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/JoaoLeal92/grcp-example/proto";
+
+package example_grpc;
+
+service ExampleGrpc {
+  rpc SayHello(Request) returns (Response) {}
+}
+
+message Request {}
+
+message Response {
+  string message = 1;
+}
